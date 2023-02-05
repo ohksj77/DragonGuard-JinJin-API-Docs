@@ -472,14 +472,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_http_response_4">HTTP response</a></li>
 </ul>
 </li>
+<li><a href="#_멤버_전체_랭킹_조회">멤버 전체 랭킹 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_http_request_5">HTTP request</a></li>
+<li><a href="#_http_response_5">HTTP response</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_search_result">Search Result</a>
 <ul class="sectlevel2">
 <li><a href="#_검색에_대한_결과_조회">검색에 대한 결과 조회</a>
 <ul class="sectlevel3">
-<li><a href="#_http_request_5">HTTP request</a></li>
-<li><a href="#_http_response_5">HTTP response</a></li>
+<li><a href="#_http_request_6">HTTP request</a></li>
+<li><a href="#_http_response_6">HTTP response</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_github_repository">Github Repository</a>
+<ul class="sectlevel2">
+<li><a href="#_레포_구성원_기여정도_조회">레포 구성원 기여정도 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_http_request_7">HTTP request</a></li>
+<li><a href="#_http_response_7">HTTP response</a></li>
 </ul>
 </li>
 </ul>
@@ -499,11 +515,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">POST /api/members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 55
+Content-Length: 30
 Host: localhost:8080
 
 {
-  "name" : "김승진",
   "githubId" : "ohksj77"
 }</code></pre>
 </div>
@@ -540,14 +555,16 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 114
+Content-Length: 174
 
 {
   "id" : 1,
   "name" : "김승진",
   "githubId" : "ohksj77",
+  "commits" : 100,
   "tier" : "SILVER",
-  "authStep" : "NONE"
+  "authStep" : "NONE",
+  "profileImage" : "http://abcd.efgh"
 }</code></pre>
 </div>
 </div>
@@ -567,14 +584,8 @@ Host: localhost:8080</code></pre>
 </div>
 <div class="sect3">
 <h4 id="_http_response_3"><a class="link" href="#_http_response_3">HTTP response</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
-Content-Type: application/json;charset=UTF-8
-Content-Length: 8
-
-"MASTER"</code></pre>
-</div>
+<div class="paragraph">
+<p>in/clude::../../../build/generated-snippets/get member tier/http-response.adoc[]</p>
 </div>
 </div>
 </div>
@@ -599,6 +610,61 @@ Host: localhost:8080</code></pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_멤버_전체_랭킹_조회"><a class="link" href="#_멤버_전체_랭킹_조회">멤버 전체 랭킹 조회</a></h3>
+<div class="sect3">
+<h4 id="_http_request_5"><a class="link" href="#_http_request_5">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/members/ranking HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_http_response_5"><a class="link" href="#_http_response_5">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 536
+
+[ {
+  "id" : 1,
+  "name" : "Kim",
+  "githubId" : "ohksj77",
+  "commits" : 10000,
+  "tier" : "MASTER"
+}, {
+  "id" : 2,
+  "name" : "Seung",
+  "githubId" : "ohksj",
+  "commits" : 5000,
+  "tier" : "RUBY"
+}, {
+  "id" : 3,
+  "name" : "Jin",
+  "githubId" : "ohksj777",
+  "commits" : 3000,
+  "tier" : "DIAMOND"
+}, {
+  "id" : 4,
+  "name" : "Lee",
+  "githubId" : "ohksjj",
+  "commits" : 1000,
+  "tier" : "PLATINUM"
+}, {
+  "id" : 5,
+  "name" : "Da",
+  "githubId" : "ohksjksj",
+  "commits" : 500,
+  "tier" : "GOLD"
+} ]</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -607,7 +673,7 @@ Host: localhost:8080</code></pre>
 <div class="sect2">
 <h3 id="_검색에_대한_결과_조회"><a class="link" href="#_검색에_대한_결과_조회">검색에 대한 결과 조회</a></h3>
 <div class="sect3">
-<h4 id="_http_request_5"><a class="link" href="#_http_request_5">HTTP request</a></h4>
+<h4 id="_http_request_6"><a class="link" href="#_http_request_6">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/search?page=1&amp;name=gitrank&amp;type=repositories HTTP/1.1
@@ -617,7 +683,7 @@ Host: localhost:8080</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_http_response_5"><a class="link" href="#_http_response_5">HTTP response</a></h4>
+<h4 id="_http_response_6"><a class="link" href="#_http_response_6">HTTP response</a></h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
@@ -649,11 +715,61 @@ Content-Length: 287
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_github_repository"><a class="link" href="#_github_repository">Github Repository</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_레포_구성원_기여정도_조회"><a class="link" href="#_레포_구성원_기여정도_조회">레포 구성원 기여정도 조회</a></h3>
+<div class="sect3">
+<h4 id="_http_request_7"><a class="link" href="#_http_request_7">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/git-repos?name=tukcom2023CD/DragonGuard-JinJin HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_http_response_7"><a class="link" href="#_http_response_7">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 390
+
+[ {
+  "githubId" : "ohksj77",
+  "commits" : 100,
+  "additions" : 1000,
+  "deletions" : 500
+}, {
+  "githubId" : "HJ39",
+  "commits" : 101,
+  "additions" : 999,
+  "deletions" : 500
+}, {
+  "githubId" : "posite",
+  "commits" : 99,
+  "additions" : 1001,
+  "deletions" : 500
+}, {
+  "githubId" : "Sammuelwoojae",
+  "commits" : 100,
+  "additions" : 1001,
+  "deletions" : 499
+} ]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-01-31 00:43:50 +0900
+Last updated 2023-02-06 00:15:41 +0900
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
