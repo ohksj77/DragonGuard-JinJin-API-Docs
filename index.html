@@ -524,6 +524,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
+<li><a href="#_blockchain">Blockchain</a>
+<ul class="sectlevel2">
+<li><a href="#_블록체인_부여_기록_리스트_조회">블록체인 부여 기록 리스트 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_http_request_12">HTTP request</a></li>
+<li><a href="#_http_response_12">HTTP response</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -777,9 +787,29 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 3
+Content-Length: 390
 
-[ ]</code></pre>
+[ {
+  "githubId" : "ohksj77",
+  "commits" : 100,
+  "additions" : 1000,
+  "deletions" : 500
+}, {
+  "githubId" : "HJ39",
+  "commits" : 101,
+  "additions" : 999,
+  "deletions" : 500
+}, {
+  "githubId" : "posite",
+  "commits" : 99,
+  "additions" : 1001,
+  "deletions" : 500
+}, {
+  "githubId" : "Sammuelwoojae",
+  "commits" : 100,
+  "additions" : 1001,
+  "deletions" : 499
+} ]</code></pre>
 </div>
 </div>
 </div>
@@ -884,11 +914,21 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 54
+Content-Length: 254
 
 {
-  "firstMember" : null,
-  "secondMember" : null
+  "firstMember" : {
+    "githubId" : "ohksj77",
+    "commits" : 100,
+    "additions" : 1000,
+    "deletions" : 500
+  },
+  "secondMember" : {
+    "githubId" : "ohksj",
+    "commits" : 101,
+    "additions" : 1001,
+    "deletions" : 501
+  }
 }</code></pre>
 </div>
 </div>
@@ -955,9 +995,9 @@ Content-Length: 2046
       }
     },
     "languages" : {
+      "kotlin" : 9999,
       "swift" : 9998,
-      "java" : 10000,
-      "kotlin" : 9999
+      "java" : 10000
     },
     "languagesStats" : {
       "count" : 4,
@@ -1001,9 +1041,9 @@ Content-Length: 2046
       }
     },
     "languages" : {
+      "kotlin" : 9999,
       "swift" : 9998,
-      "java" : 10000,
-      "kotlin" : 9999
+      "java" : 10000
     },
     "languagesStats" : {
       "count" : 4,
@@ -1016,8 +1056,47 @@ Content-Length: 2046
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Unresolved directive in index.adoc - include::../src/docs/asciidoc/blockchain.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_blockchain"><a class="link" href="#_blockchain">Blockchain</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_블록체인_부여_기록_리스트_조회"><a class="link" href="#_블록체인_부여_기록_리스트_조회">블록체인 부여 기록 리스트 조회</a></h3>
+<div class="sect3">
+<h4 id="_http_request_12"><a class="link" href="#_http_request_12">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">GET /api/blockchain/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_http_response_12"><a class="link" href="#_http_response_12">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 229
+
+[ {
+  "id" : 1,
+  "contributeType" : "COMMIT",
+  "amount" : 10,
+  "githubId" : "ohksj77",
+  "memberId" : 1
+}, {
+  "id" : 2,
+  "contributeType" : "COMMIT",
+  "amount" : 5,
+  "githubId" : "ohksj77",
+  "memberId" : 1
+} ]</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -1027,7 +1106,7 @@ Content-Length: 2046
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-02-25 18:17:09 +0900
+Last updated 2023-02-25 18:32:32 +0900
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
