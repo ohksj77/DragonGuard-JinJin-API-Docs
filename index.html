@@ -604,7 +604,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_http_response_22">HTTP response</a></li>
 </ul>
 </li>
-<li><a href="#_전체_조직_조회">전체 조직 조회</a>
+<li><a href="#_전체_조직_랭킹_조회">전체 조직 랭킹 조회</a>
 <ul class="sectlevel3">
 <li><a href="#_http_request_23">HTTP request</a></li>
 <li><a href="#_http_response_23">HTTP response</a></li>
@@ -658,7 +658,7 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 53
 
 {
-  "id" : "6a4e7278-eedc-4941-80a9-f8bba40091e9"
+  "id" : "1df60e43-974d-4810-a199-2f39175df28e"
 }</code></pre>
 </div>
 </div>
@@ -734,31 +734,31 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 716
 
 [ {
-  "id" : "ab3e3e31-0a4b-4ef2-9f48-677103c8b0d8",
+  "id" : "052132b6-942c-4ead-be5e-283ab7f115bc",
   "name" : "Kim",
   "githubId" : "ohksj77",
   "tokens" : 10000,
   "tier" : "MASTER"
 }, {
-  "id" : "5d84a3b1-5479-47dd-bc46-448d6a1c7f0d",
+  "id" : "b501acc1-fc5a-42eb-9146-1ef04c084b7d",
   "name" : "Seung",
   "githubId" : "ohksj",
   "tokens" : 5000,
   "tier" : "RUBY"
 }, {
-  "id" : "662b5f19-c9f6-4459-9575-0992701b227f",
+  "id" : "a7abcf38-c6ff-4ab4-ab2c-016b6d218daa",
   "name" : "Jin",
   "githubId" : "ohksj777",
   "tokens" : 3000,
   "tier" : "DIAMOND"
 }, {
-  "id" : "4c3cc10c-d8d8-41e0-9775-c9b9226dab62",
+  "id" : "70979783-f94c-4951-b97b-ae84787ed95d",
   "name" : "Lee",
   "githubId" : "ohksjj",
   "tokens" : 1000,
   "tier" : "PLATINUM"
 }, {
-  "id" : "c0cf01fb-84c1-42b0-9151-e0f885fef2ca",
+  "id" : "d0fce888-8b9e-47a7-8afb-75e9cf15e564",
   "name" : "Da",
   "githubId" : "ohksjksj",
   "tokens" : 500,
@@ -816,25 +816,25 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 601
 
 [ {
-  "id" : "5363529b-48eb-4bf6-8f3b-16c5ec04a886",
+  "id" : "710b5041-7ae9-4995-8d79-98b4a1999f90",
   "name" : "정해진",
   "githubId" : "HJ39",
   "tokens" : 20,
   "tier" : "SPROUT"
 }, {
-  "id" : "9f752c01-d469-4d37-bb6e-9ba2ce4f5e1f",
+  "id" : "79411255-24fe-4ef9-ad88-f630f24ba1c0",
   "name" : "넓은관용",
   "githubId" : "Sammuelwoojae",
   "tokens" : 20,
   "tier" : "SPROUT"
 }, {
-  "id" : "be2141b7-2704-42cf-bce1-235549c210e9",
+  "id" : "97ccdab4-7a29-4e89-b822-efbce27e0b75",
   "name" : "회사승진",
   "githubId" : "ohksj77",
   "tokens" : 20,
   "tier" : "SPROUT"
 }, {
-  "id" : "1accabe7-46ac-4738-bf95-a08330c80393",
+  "id" : "c736cddb-e2e7-4f53-90fc-b7ce3aeeed78",
   "name" : "영어수학",
   "githubId" : "posite",
   "tokens" : 20,
@@ -862,10 +862,10 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 302
+Content-Length: 329
 
 {
-  "id" : "d63a937a-c35e-49d3-9b05-48228c56a481",
+  "id" : "617ce464-86a2-42a9-ac82-7dfa91eae0e3",
   "name" : "KimSeungjin",
   "githubId" : "ohksj77",
   "commits" : 1000,
@@ -873,6 +873,7 @@ Content-Length: 302
   "authStep" : "ALL",
   "profileImage" : "https://github.com",
   "rank" : 1,
+  "organizationRank" : 1,
   "tokenAmount" : 2000,
   "organization" : "한국공학대학교"
 }</code></pre>
@@ -1208,9 +1209,9 @@ Content-Length: 2046
       }
     },
     "languages" : {
-      "java" : 10000,
       "swift" : 9998,
-      "kotlin" : 9999
+      "kotlin" : 9999,
+      "java" : 10000
     },
     "languagesStats" : {
       "count" : 4,
@@ -1254,9 +1255,9 @@ Content-Length: 2046
       }
     },
     "languages" : {
-      "java" : 10000,
       "swift" : 9998,
-      "kotlin" : 9999
+      "kotlin" : 9999,
+      "java" : 10000
     },
     "languagesStats" : {
       "count" : 4,
@@ -1302,13 +1303,13 @@ Content-Length: 303
   "contributeType" : "COMMIT",
   "amount" : 10,
   "githubId" : "ohksj77",
-  "memberId" : "56f5a090-b29b-4935-8342-aa8518bb0e59"
+  "memberId" : "bf6f81d7-3d9c-45a0-bf38-1bfcfd035533"
 }, {
   "id" : 2,
   "contributeType" : "COMMIT",
   "amount" : 5,
   "githubId" : "ohksj77",
-  "memberId" : "7c412d50-8dbd-4ff3-9151-007712eb731e"
+  "memberId" : "231af127-e56b-4654-9ec8-3a3cf66aa856"
 } ]</code></pre>
 </div>
 </div>
@@ -1554,30 +1555,33 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 367
+Content-Length: 436
 
 [ {
   "id" : 1,
   "name" : "한국공학대학교",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "tukorea.ac.kr"
+  "emailEndpoint" : "tukorea.ac.kr",
+  "tokenSum" : 100000
 }, {
   "id" : 2,
   "name" : "서울대학교",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "snu.ac.kr"
+  "emailEndpoint" : "snu.ac.kr",
+  "tokenSum" : 10000
 }, {
   "id" : 3,
   "name" : "KAIST",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "kaist.ac.kr"
+  "emailEndpoint" : "kaist.ac.kr",
+  "tokenSum" : 1000
 } ]</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_전체_조직_조회"><a class="link" href="#_전체_조직_조회">전체 조직 조회</a></h3>
+<h3 id="_전체_조직_랭킹_조회"><a class="link" href="#_전체_조직_랭킹_조회">전체 조직 랭킹 조회</a></h3>
 <div class="sect3">
 <h4 id="_http_request_23"><a class="link" href="#_http_request_23">HTTP request</a></h4>
 <div class="listingblock">
@@ -1595,23 +1599,26 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 367
+Content-Length: 436
 
 [ {
   "id" : 1,
   "name" : "한국공학대학교",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "tukorea.ac.kr"
+  "emailEndpoint" : "tukorea.ac.kr",
+  "tokenSum" : 100000
 }, {
   "id" : 2,
   "name" : "서울대학교",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "snu.ac.kr"
+  "emailEndpoint" : "snu.ac.kr",
+  "tokenSum" : 10000
 }, {
   "id" : 3,
   "name" : "KAIST",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "kaist.ac.kr"
+  "emailEndpoint" : "kaist.ac.kr",
+  "tokenSum" : 1000
 } ]</code></pre>
 </div>
 </div>
@@ -1636,23 +1643,26 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 367
+Content-Length: 436
 
 [ {
   "id" : 1,
   "name" : "한국공학대학교",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "tukorea.ac.kr"
+  "emailEndpoint" : "tukorea.ac.kr",
+  "tokenSum" : 100000
 }, {
   "id" : 2,
   "name" : "서울대학교",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "snu.ac.kr"
+  "emailEndpoint" : "snu.ac.kr",
+  "tokenSum" : 10000
 }, {
   "id" : 3,
   "name" : "KAIST",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "kaist.ac.kr"
+  "emailEndpoint" : "kaist.ac.kr",
+  "tokenSum" : 1000
 } ]</code></pre>
 </div>
 </div>
@@ -1677,23 +1687,26 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code data-lang="http" class="language-http hljs">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 367
+Content-Length: 436
 
 [ {
   "id" : 1,
   "name" : "한국공학대학교",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "tukorea.ac.kr"
+  "emailEndpoint" : "tukorea.ac.kr",
+  "tokenSum" : 100000
 }, {
   "id" : 2,
   "name" : "서울대학교",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "snu.ac.kr"
+  "emailEndpoint" : "snu.ac.kr",
+  "tokenSum" : 10000
 }, {
   "id" : 3,
   "name" : "KAIST",
   "organizationType" : "UNIVERSITY",
-  "emailEndpoint" : "kaist.ac.kr"
+  "emailEndpoint" : "kaist.ac.kr",
+  "tokenSum" : 1000
 } ]</code></pre>
 </div>
 </div>
@@ -1705,7 +1718,7 @@ Content-Length: 367
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1-SNAPSHOT<br>
-Last updated 2023-03-29 21:18:16 +0900
+Last updated 2023-04-04 16:45:00 +0900
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
