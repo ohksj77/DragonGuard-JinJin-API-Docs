@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.18">
+<meta name="generator" content="Asciidoctor 2.0.20">
 <title>GIT-RANK API</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -208,13 +208,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -393,7 +390,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -584,6 +581,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_블록체인_부여_기록_리스트_조회_http_response">HTTP response</a></li>
 </ul>
 </li>
+<li><a href="#_블록체인_내역_수동_업데이트_및_조회">블록체인 내역 수동 업데이트 및 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_블록체인_내역_수동_업데이트_및_조회_http_request">HTTP request</a></li>
+<li><a href="#_블록체인_내역_수동_업데이트_및_조회_http_response">HTTP response</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_auth">Auth</a>
@@ -702,7 +705,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 31
+Content-Length: 29
 Host: localhost:8080
 
 {
@@ -717,10 +720,10 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 53
+Content-Length: 51
 
 {
-  "id" : "14a52087-5131-4c65-b17e-76a05c3dda7f"
+  "id" : "b4559734-897b-41e7-a7ad-6acfc7ea5051"
 }</code></pre>
 </div>
 </div>
@@ -793,38 +796,38 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 1036
+Content-Length: 1001
 
 [ {
-  "id" : "7450a6fd-61f4-45d0-b887-ad5c35896ae3",
+  "id" : "1089779e-7096-4707-bad9-3d863417e525",
   "name" : "Kim",
   "github_id" : "ohksj77",
   "tokens" : 10000,
   "tier" : "MASTER",
   "profile_image" : "http://github123123412412412profileUrl"
 }, {
-  "id" : "ad090115-0c3e-4abf-9a4d-0ec887c5206f",
+  "id" : "13fc9a71-7e06-4f55-a4e5-f3f27c9f8fd2",
   "name" : "Seung",
   "github_id" : "ohksj",
   "tokens" : 5000,
   "tier" : "RUBY",
   "profile_image" : "http://github123123412412412profileUrl"
 }, {
-  "id" : "c3dec2bb-e822-4cf8-b42b-579c49f02b61",
+  "id" : "e54ae409-074f-41a2-8731-83746e828b8a",
   "name" : "Jin",
   "github_id" : "ohksj777",
   "tokens" : 3000,
   "tier" : "DIAMOND",
   "profile_image" : "http://github123123412412412profileUrl"
 }, {
-  "id" : "77e0be24-9961-4667-bca1-46c77c0e415e",
+  "id" : "187ed8b5-aa58-44e5-b6e7-3b29a77dfc97",
   "name" : "Lee",
   "github_id" : "ohksjj",
   "tokens" : 1000,
   "tier" : "PLATINUM",
   "profile_image" : "http://github123123412412412profileUrl"
 }, {
-  "id" : "dc445e2f-da17-433a-8f91-6c05fb7587c1",
+  "id" : "9e94d404-d519-432c-a10c-56a84ab6b700",
   "name" : "Da",
   "github_id" : "ohksjksj",
   "tokens" : 500,
@@ -844,7 +847,7 @@ Content-Length: 1036
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /members/wallet-address HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 45
+Content-Length: 43
 Host: localhost:8080
 
 {
@@ -880,31 +883,31 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 833
+Content-Length: 805
 
 [ {
-  "id" : "aff1af66-1622-48a7-a816-d50bb407ec40",
+  "id" : "3d1addf8-2fca-4198-8dd6-deedd82b4881",
   "name" : "정해진",
   "github_id" : "HJ39",
   "tokens" : 20,
   "tier" : "SPROUT",
   "profile_image" : "http://githubUserProfileImageUrl"
 }, {
-  "id" : "5c0f0671-9349-45c1-99ee-07acb337efee",
+  "id" : "20eb6892-a2c3-419d-a908-387c961163d5",
   "name" : "넓은관용",
   "github_id" : "Sammuelwoojae",
   "tokens" : 20,
   "tier" : "SPROUT",
   "profile_image" : "http://githubUserProfileImageUrl"
 }, {
-  "id" : "096fdf00-2053-4242-b4a6-a7c56206398a",
+  "id" : "507db2b3-737f-4e90-8b79-1ccb34d9b1ee",
   "name" : "회사승진",
   "github_id" : "ohksj77",
   "tokens" : 20,
   "tier" : "SPROUT",
   "profile_image" : "http://githubUserProfileImageUrl"
 }, {
-  "id" : "e0b4643b-e387-4d26-96be-112b5a7f1da7",
+  "id" : "82d1a35f-95b1-44d9-b2d1-9e220279374a",
   "name" : "영어수학",
   "github_id" : "posite",
   "tokens" : 20,
@@ -933,10 +936,10 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 513
+Content-Length: 495
 
 {
-  "id" : "26b244a4-704c-48ea-9740-27f00f66cacc",
+  "id" : "4aaef781-e452-41ef-a5e8-7c06cb25770f",
   "name" : "김승진",
   "github_id" : "ohksj77",
   "commits" : 100,
@@ -977,7 +980,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 285
+Content-Length: 278
 
 {
   "git_organizations" : [ {
@@ -1031,7 +1034,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 164
+Content-Length: 161
 
 {
   "profile_image" : "http://someProfileImageOfOrg",
@@ -1059,7 +1062,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 230
+Content-Length: 221
 
 {
   "commits" : 1,
@@ -1099,7 +1102,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 257
+Content-Length: 239
 
 [ {
   "id" : 1,
@@ -1143,38 +1146,38 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 896
+Content-Length: 851
 
 [ {
   "id" : 1,
   "name" : "tukcom2023CD/DragonGuard-JinJin",
   "language" : "java",
   "description" : "블록체인기반깃랭크시스템",
-  "created_at" : "2023-06-24T14:11:17.086696800"
+  "created_at" : "2023-06-30T23:54:49.126616"
 }, {
   "id" : 2,
   "name" : "tukcom2023CD/DragonGuard",
   "language" : "swift",
   "description" : "블록체인기반깃랭크시스템",
-  "created_at" : "2023-06-24T14:11:17.086696800"
+  "created_at" : "2023-06-30T23:54:49.126636"
 }, {
   "id" : 3,
   "name" : "tukcom2023CD/JinJin",
   "language" : "java",
   "description" : "진진시스템",
-  "created_at" : "2023-06-24T14:11:17.086696800"
+  "created_at" : "2023-06-30T23:54:49.126640"
 }, {
   "id" : 4,
   "name" : "tukcom2023CD/Dragon",
   "language" : "java",
   "description" : "드래곤시스템",
-  "created_at" : "2023-06-24T14:11:17.086696800"
+  "created_at" : "2023-06-30T23:54:49.126643"
 }, {
   "id" : 5,
   "name" : "tukcom2023CD/Dragon-Jin",
   "language" : "java",
   "description" : "드래곤진",
-  "created_at" : "2023-06-24T14:11:17.086696800"
+  "created_at" : "2023-06-30T23:54:49.126646"
 } ]</code></pre>
 </div>
 </div>
@@ -1204,7 +1207,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 861
+Content-Length: 830
 
 {
   "spark_line" : [ 1, 1, 1, 2, 3, 4, 5, 6, 24, 212, 32, 4 ],
@@ -1273,7 +1276,7 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /git-repos/compare/git-repos-members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 92
+Content-Length: 89
 Host: localhost:8080
 
 {
@@ -1289,7 +1292,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 1588
+Content-Length: 1529
 
 {
   "first_result" : [ {
@@ -1364,7 +1367,7 @@ Content-Length: 1588
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /git-repos/compare/git-repos-members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 92
+Content-Length: 89
 Host: localhost:8080
 
 {
@@ -1392,7 +1395,7 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /git-repos/compare HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 92
+Content-Length: 89
 Host: localhost:8080
 
 {
@@ -1408,7 +1411,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 2202
+Content-Length: 2107
 
 {
   "first_repo" : {
@@ -1519,7 +1522,7 @@ Content-Length: 2202
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /git-repos/compare HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 92
+Content-Length: 89
 Host: localhost:8080
 
 {
@@ -1547,7 +1550,7 @@ Host: localhost:8080
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /git-repos/compare/members HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 159
+Content-Length: 154
 Host: localhost:8080
 
 {
@@ -1565,7 +1568,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 426
+Content-Length: 409
 
 {
   "first_member" : {
@@ -1613,23 +1616,65 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 493
+Content-Length: 471
 
 [ {
   "id" : 1,
   "contribute_type" : "COMMIT",
   "amount" : 10,
   "github_id" : "ohksj77",
-  "member_id" : "96c81916-1ac8-4628-a710-3556a11e81b0",
-  "created_at" : "2023-06-24T14:10:55.966432700",
+  "member_id" : "856871d6-8d4a-4d88-85ec-4e6d685d830c",
+  "created_at" : "2023-06-30T23:54:42.897891",
   "transaction_hash_url" : "123123123"
 }, {
   "id" : 2,
   "contribute_type" : "COMMIT",
   "amount" : 5,
   "github_id" : "ohksj77",
-  "member_id" : "213e22f1-8546-4902-9c43-11ed8a88a064",
-  "created_at" : "2023-06-24T14:10:55.966432700",
+  "member_id" : "0aabc4be-6344-4c33-9bcc-30d8b913c5cb",
+  "created_at" : "2023-06-30T23:54:42.897926",
+  "transaction_hash_url" : "321321321"
+} ]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_블록체인_내역_수동_업데이트_및_조회"><a class="link" href="#_블록체인_내역_수동_업데이트_및_조회">블록체인 내역 수동 업데이트 및 조회</a></h3>
+<div class="sect3">
+<h4 id="_블록체인_내역_수동_업데이트_및_조회_http_request"><a class="link" href="#_블록체인_내역_수동_업데이트_및_조회_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /blockchain/update HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_블록체인_내역_수동_업데이트_및_조회_http_response"><a class="link" href="#_블록체인_내역_수동_업데이트_및_조회_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 471
+
+[ {
+  "id" : 1,
+  "contribute_type" : "COMMIT",
+  "amount" : 10,
+  "github_id" : "ohksj77",
+  "member_id" : "6310dd1d-4066-48c9-a260-3197a7a6ecd7",
+  "created_at" : "2023-06-30T23:54:42.904724",
+  "transaction_hash_url" : "123123123"
+}, {
+  "id" : 2,
+  "contribute_type" : "COMMIT",
+  "amount" : 5,
+  "github_id" : "ohksj77",
+  "member_id" : "0cbd21f6-b2fd-40c5-b5ed-a1e1305f8488",
+  "created_at" : "2023-06-30T23:54:42.904741",
   "transaction_hash_url" : "321321321"
 } ]</code></pre>
 </div>
@@ -1661,7 +1706,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 108
+Content-Length: 104
 
 {
   "access_token" : "1234.1234.1234",
@@ -1696,7 +1741,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 16
+Content-Length: 14
 
 {
   "id" : 1
@@ -1724,7 +1769,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 30
+Content-Length: 28
 
 {
   "is_valid_code" : true
@@ -1769,7 +1814,7 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /organizations HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 118
+Content-Length: 114
 Host: localhost:8080
 
 {
@@ -1786,7 +1831,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 16
+Content-Length: 14
 
 {
   "id" : 1
@@ -1814,7 +1859,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 16
+Content-Length: 14
 
 {
   "id" : 1
@@ -1832,7 +1877,7 @@ Content-Length: 16
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /organizations/add-member HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 67
+Content-Length: 64
 Host: localhost:8080
 
 {
@@ -1848,7 +1893,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 16
+Content-Length: 14
 
 {
   "id" : 1
@@ -1876,7 +1921,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 445
+Content-Length: 427
 
 [ {
   "id" : 1,
@@ -1920,7 +1965,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 445
+Content-Length: 427
 
 [ {
   "id" : 1,
@@ -1964,7 +2009,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 445
+Content-Length: 427
 
 [ {
   "id" : 1,
@@ -2008,7 +2053,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 445
+Content-Length: 427
 
 [ {
   "id" : 1,
@@ -2069,7 +2114,7 @@ Host: localhost:8080</code></pre>
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /admin/organizations/decide HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Content-Length: 42
+Content-Length: 39
 Host: localhost:8080
 
 {
@@ -2085,7 +2130,7 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 146
+Content-Length: 138
 
 [ {
   "id" : 2,
@@ -2119,7 +2164,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 146
+Content-Length: 138
 
 [ {
   "id" : 2,
@@ -2139,7 +2184,7 @@ Content-Length: 146
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-06-23 11:06:21 +0900
+Last updated 2023-06-24 21:30:41 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
