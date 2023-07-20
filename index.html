@@ -445,14 +445,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_member_멤버">Member 멤버</a>
+<li><a href="#_member">Member</a>
 <ul class="sectlevel2">
-<li><a href="#_멤버_티어_조회">멤버 티어 조회</a>
-<ul class="sectlevel3">
-<li><a href="#_멤버_티어_조회_http_request">HTTP request</a></li>
-<li><a href="#_멤버_티어_조회_http_response">HTTP response</a></li>
-</ul>
-</li>
 <li><a href="#_멤버_커밋_내역_업데이트">멤버 커밋 내역 업데이트</a>
 <ul class="sectlevel3">
 <li><a href="#_멤버_커밋_내역_업데이트_http_request">HTTP request</a></li>
@@ -698,34 +692,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_member_멤버"><a class="link" href="#_member_멤버">Member 멤버</a></h2>
+<h2 id="_member"><a class="link" href="#_member">Member</a></h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_멤버_티어_조회"><a class="link" href="#_멤버_티어_조회">멤버 티어 조회</a></h3>
-<div class="sect3">
-<h4 id="_멤버_티어_조회_http_request"><a class="link" href="#_멤버_티어_조회_http_request">HTTP request</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /members/tier HTTP/1.1
-Content-Type: application/json;charset=UTF-8
-Authorization: Bearer apfawfawfa.awfsfawef2.r4svfv32
-Host: localhost:8080</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_멤버_티어_조회_http_response"><a class="link" href="#_멤버_티어_조회_http_response">HTTP response</a></h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
-Content-Type: application/json;charset=UTF-8
-Content-Length: 8
-
-"MASTER"</code></pre>
-</div>
-</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_멤버_커밋_내역_업데이트"><a class="link" href="#_멤버_커밋_내역_업데이트">멤버 커밋 내역 업데이트</a></h3>
 <div class="sect3">
@@ -770,35 +738,35 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 1001
 
 [ {
-  "id" : "3966ee4c-8174-4007-86a7-ff11524ed9e7",
+  "id" : "ad139fea-1fd7-498e-9dff-857de5ed55d7",
   "name" : "Kim",
   "github_id" : "ohksj77",
   "tokens" : 10000,
   "tier" : "MASTER",
   "profile_image" : "http://github123123412412412profileUrl"
 }, {
-  "id" : "a75dfd0a-3d8a-4b44-8a7d-b78a1f5e7922",
+  "id" : "f1046ca0-d8ab-4c98-b2f6-b2cb4c0e1c8d",
   "name" : "Seung",
   "github_id" : "ohksj",
   "tokens" : 5000,
   "tier" : "RUBY",
   "profile_image" : "http://github123123412412412profileUrl"
 }, {
-  "id" : "45c40b02-b912-41be-893a-627ac162ccef",
+  "id" : "45211490-2898-432c-b658-91b43dbd9903",
   "name" : "Jin",
   "github_id" : "ohksj777",
   "tokens" : 3000,
   "tier" : "DIAMOND",
   "profile_image" : "http://github123123412412412profileUrl"
 }, {
-  "id" : "f484f5df-fb46-43c1-bb64-fd89faf29a22",
+  "id" : "7116e0cd-16b8-4eb0-b737-60485baada48",
   "name" : "Lee",
   "github_id" : "ohksjj",
   "tokens" : 1000,
   "tier" : "PLATINUM",
   "profile_image" : "http://github123123412412412profileUrl"
 }, {
-  "id" : "df294c62-e2d0-45d3-8a88-6af1e7150a13",
+  "id" : "c9a988ea-8277-47af-833e-fc156742381f",
   "name" : "Da",
   "github_id" : "ohksjksj",
   "tokens" : 500,
@@ -857,28 +825,28 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 805
 
 [ {
-  "id" : "a99ec44d-4973-4ab7-9404-6c16fba4fd5c",
+  "id" : "624ecb31-518c-45fb-87f7-61549b8cd372",
   "name" : "정해진",
   "github_id" : "HJ39",
   "tokens" : 20,
   "tier" : "SPROUT",
   "profile_image" : "http://githubUserProfileImageUrl"
 }, {
-  "id" : "7e3b3eb5-7eb3-4438-b4e4-fb2a7ecca241",
+  "id" : "9f61adcd-dbe5-482f-9475-2936858b14d2",
   "name" : "넓은관용",
   "github_id" : "Sammuelwoojae",
   "tokens" : 20,
   "tier" : "SPROUT",
   "profile_image" : "http://githubUserProfileImageUrl"
 }, {
-  "id" : "7f44d2d5-36f7-4b47-af24-8d0e628bb81e",
+  "id" : "008a7ed5-c6b9-4659-9220-5cdce76743da",
   "name" : "회사승진",
   "github_id" : "ohksj77",
   "tokens" : 20,
   "tier" : "SPROUT",
   "profile_image" : "http://githubUserProfileImageUrl"
 }, {
-  "id" : "ba7012c4-2ad8-402b-8c67-20d551e41507",
+  "id" : "ac5a3401-5015-4152-8460-edcf93599e8c",
   "name" : "영어수학",
   "github_id" : "posite",
   "tokens" : 20,
@@ -910,7 +878,7 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 495
 
 {
-  "id" : "d2ef43b1-78e4-4d6d-b1f4-d39b88071d04",
+  "id" : "9c4bdf7b-4d0e-4869-bf76-784eb95fd0dd",
   "name" : "김승진",
   "github_id" : "ohksj77",
   "commits" : 100,
@@ -1070,7 +1038,7 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 495
 
 {
-  "id" : "c851d5c6-9f51-479c-a693-d69850465c5a",
+  "id" : "3651b43f-4881-4230-99ea-a4d11c41f759",
   "name" : "김승진",
   "github_id" : "ohksj77",
   "commits" : 100,
@@ -1194,31 +1162,31 @@ Content-Length: 851
   "name" : "tukcom2023CD/DragonGuard-JinJin",
   "language" : "java",
   "description" : "블록체인기반깃랭크시스템",
-  "created_at" : "2023-07-14T01:26:19.536998"
+  "created_at" : "2023-07-20T13:59:38.937798"
 }, {
   "id" : 2,
   "name" : "tukcom2023CD/DragonGuard",
   "language" : "swift",
   "description" : "블록체인기반깃랭크시스템",
-  "created_at" : "2023-07-14T01:26:19.537036"
+  "created_at" : "2023-07-20T13:59:38.937828"
 }, {
   "id" : 3,
   "name" : "tukcom2023CD/JinJin",
   "language" : "java",
   "description" : "진진시스템",
-  "created_at" : "2023-07-14T01:26:19.537042"
+  "created_at" : "2023-07-20T13:59:38.937833"
 }, {
   "id" : 4,
   "name" : "tukcom2023CD/Dragon",
   "language" : "java",
   "description" : "드래곤시스템",
-  "created_at" : "2023-07-14T01:26:19.537048"
+  "created_at" : "2023-07-20T13:59:38.937836"
 }, {
   "id" : 5,
   "name" : "tukcom2023CD/Dragon-Jin",
   "language" : "java",
   "description" : "드래곤진",
-  "created_at" : "2023-07-14T01:26:19.537063"
+  "created_at" : "2023-07-20T13:59:38.937840"
 } ]</code></pre>
 </div>
 </div>
@@ -1489,9 +1457,9 @@ Content-Length: 2107
       }
     },
     "languages" : {
-      "swift" : 9998,
+      "java" : 10000,
       "kotlin" : 9999,
-      "java" : 10000
+      "swift" : 9998
     },
     "languages_stats" : {
       "count" : 4,
@@ -1536,9 +1504,9 @@ Content-Length: 2107
       }
     },
     "languages" : {
-      "swift" : 9998,
+      "java" : 10000,
       "kotlin" : 9999,
-      "java" : 10000
+      "swift" : 9998
     },
     "languages_stats" : {
       "count" : 4,
@@ -1664,16 +1632,16 @@ Content-Length: 471
   "contribute_type" : "COMMIT",
   "amount" : 10,
   "github_id" : "ohksj77",
-  "member_id" : "5c747809-7288-418d-946a-10404b702aa1",
-  "created_at" : "2023-07-14T01:26:19.772086",
+  "member_id" : "920db1f8-8488-4783-85be-591f71830999",
+  "created_at" : "2023-07-20T13:59:39.196942",
   "transaction_hash_url" : "123123123"
 }, {
   "id" : 2,
   "contribute_type" : "COMMIT",
   "amount" : 5,
   "github_id" : "ohksj77",
-  "member_id" : "f6ea0b93-b627-4f47-8f02-a28845a1b0dc",
-  "created_at" : "2023-07-14T01:26:19.772123",
+  "member_id" : "9a0472d6-750e-4792-b172-57d854da7fd5",
+  "created_at" : "2023-07-20T13:59:39.196971",
   "transaction_hash_url" : "321321321"
 } ]</code></pre>
 </div>
@@ -2129,16 +2097,18 @@ Host: localhost:8080
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 138
+Content-Length: 210
 
 [ {
   "id" : 2,
   "name" : "한국공학대학교",
-  "type" : "UNIVERSITY"
+  "type" : "UNIVERSITY",
+  "email_endpoint" : "tukorea.ac.kr"
 }, {
   "id" : 3,
   "name" : "Google",
-  "type" : "COMPANY"
+  "type" : "COMPANY",
+  "email_endpoint" : "gmail.com"
 } ]</code></pre>
 </div>
 </div>
@@ -2163,16 +2133,18 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 138
+Content-Length: 210
 
 [ {
   "id" : 2,
   "name" : "한국공학대학교",
-  "type" : "UNIVERSITY"
+  "type" : "UNIVERSITY",
+  "email_endpoint" : "tukorea.ac.kr"
 }, {
   "id" : 3,
   "name" : "Google",
-  "type" : "COMPANY"
+  "type" : "COMPANY",
+  "email_endpoint" : "gmail.com"
 } ]</code></pre>
 </div>
 </div>
